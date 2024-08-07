@@ -2,21 +2,49 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
 .postItem {
   border: 1px solid #ddd;
   border-radius: 8px;
-  padding: 15px;
+  padding: 20px;
+  background-color: #fff;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .postTitle {
   font-size: 1.5rem;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
+  color: #333;
 }
 
 .postContent {
   font-size: 1rem;
-  color: #555;
+  color: #666;
+  line-height: 1.6;
+}
+
+.postMeta {
+  margin-top: 15px;
+  font-size: 0.875rem;
+  color: #999;
+  display: flex;
+  justify-content: space-between;
+}
+
+.postAuthor {
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+}
+
+.postDate {
+  font-style: italic;
+}
+
+#avatar {
+  margin-right: 5px;
 }

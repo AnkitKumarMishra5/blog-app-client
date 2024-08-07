@@ -1,15 +1,14 @@
-import { useState } from 'react';
+import { useState, FormEvent } from 'react';
 import { useRouter } from 'next/router';
 import api from '../utils/api';
 import Cookies from 'js-cookie';
 import styles from '../styles/PostForm.module.css';
 
-const PostForm = () => {
+const PostForm = ({ fetchPosts }: any) => {
     const [title, setTitle] = useState('');
     const [content, setContent] = useState('');
-    const router = useRouter();
 
-    const handleSubmit = async (e: any) => {
+    const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         try {
             const token = Cookies.get('token');
@@ -18,7 +17,9 @@ const PostForm = () => {
                     Authorization: `Bearer ${token}`
                 }
             });
-            router.push('/dashboard');
+            fetchPosts()
+            setTitle('')
+            setContent('')
         } catch (error) {
             console.error('Error posting the article:', error);
         }
