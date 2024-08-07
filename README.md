@@ -30,3 +30,6 @@
 - The frontend uses Next.js 14 with TypeScript.
 - Axios is used for making API requests.
 - CSS modules are used for styling.
+
+![image](https://github.com/user-attachments/assets/3767a5b7-dc88-4984-88c7-b84d4d568cd7)
+
